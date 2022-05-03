@@ -13,6 +13,11 @@
         *{
             text-align: center;
         }
+        #para{
+            width: 470px;
+            text-align: center;
+            overflow-x: hidden;
+        }
         #start{
             position: absolute;
             top: 89%;
@@ -69,8 +74,14 @@
             position: absolute;
             left: 32.5%;
             height: 560px;
-            width: 500px;
+            color: white;
+            width: 530px;
             border: 10px solid rgb(1, 114, 99);
+            overflow-y: scroll;
+            overflow-wrap: break-word;
+            text-align: center;
+            scrollbar-width: hide;
+            scroll-snap-align: center;
            /*background-color: white;*/
         }
         h1{
@@ -95,6 +106,7 @@
          border: 6px solid rgb(2, 49, 50);
          box-shadow: 7px 7px 20px 20px rgb(85, 173, 165);
          background-color: rgb(241, 246, 246);
+         overflow-y: scroll;
        }
        #text-area{
            position: absolute;
@@ -133,6 +145,12 @@
            background-color: rgb(3, 114, 72);
            font-size: 20px;
            cursor: pointer;
+}
+#rate{
+    position: absolute;
+    left: 80%;
+    background-color: aliceblue;
+
 }
     </style>
 </head>
@@ -183,7 +201,7 @@
         main.style.display = "none";
     }
     button.addEventListener("click" , function(){
-         speech.rate = 1;
+         speech.rate = 2;
          speech.volume = 2;
          speech.text = para.innerHTML;
          speechSynthesis.speak(speech);
